@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+  <head>
+  	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="/script/practice.css" rel="stylesheet" />
+    <link href="/script/bootstrap.css" rel="stylesheet" />
+    <style>
+      /* this selector defines that 
+      all the <h1> tags are green */
+      h1 {
+        color: green;
+      }
+
+      /* individual html tags can have 
+      separate ids which must be unique */
+      #a {
+        color: red;
+      }
+
+      /* individual html tags can have 
+      separate ids which must be unique */
+      #b {
+        color: blue;
+      }
+
+      /* you can also define generic classes, 
+      and multiple classes can be defined. 
+         This is the most common way of defining styles */
+      .someclass {
+        color: orange;
+      }
+      .text-left,
+      .text-start {
+        text-align: left !important;
+      }
+
+      .text-right,
+      .text-end {
+        text-align: right !important;
+      }
+
+      .text-center {
+        text-align: center !important;
+      }
+
+      .text-justify {
+        text-align: justify !important;
+      }
+
+      .text-both {
+        text-align: justify !important;
+        text-align-last: justify !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>This is heading h1 size</h1>
+    <h2 id="a">This is heading h2 size</h2>
+    <h3 id="b">This is heading h3 size</h3>
+    <h4>This is heading h4 size</h4>
+    <h5>This is heading h5 size</h5>
+    <h6>This is heading h6 size</h6> -->
+    <h1>Big</h1>
+    <h2 id="a">Still big</h2>
+    <h3 id="b">Normal</h3>
+    <h4>smol</h4>
+    <h5 id="a">very smol</h5>
+    <h6 id="b">can you even read this</h6>
+    <div>
+      <h1>Some Important Header</h1>
+      <p class="someclass">
+        This is a paragraph description.
+      </p>
+      <a href="https://www.google.com.sg" target="_self">Link 1 (Self)</a>
+      <a href="https://www.google.com.sg" target="_blank">Link 2 (Blank)</a>
+      <a href="https://www.google.com.sg" target="_parent">Link 3 (Parent)</a>
+      <a href="https://www.google.com.sg" target="_top">Link 4 (Top)</a>
+      <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget eros nec nisl accumsan fringilla. Morbi dignissim libero quis nisi congue, eu placerat dolor feugiat. Fusce lacinia tincidunt lacus, a consequat augue consequat at. Sed eget gravida libero, id volutpat tellus. Nullam orci sapien, cursus commodo mauris sed, iaculis congue ipsum. Nulla rutrum malesuada ex, nec convallis lacus tristique vel. Sed quis nunc rutrum, venenatis nibh quis, cursus sem. Phasellus eget augue id dui volutpat pellentesque. Nam in lacus placerat, fermentum tortor quis, pretium turpis. Quisque non lorem accumsan, laoreet metus sed, faucibus purus. Donec finibus eros eu fermentum tempus. Aenean nec consequat libero. Vestibulum aliquet felis quam, non vulputate ligula feugiat quis. Aenean at sollicitudin dolor. Donec sed pharetra lacus.</p>
+      <p class="text-right">In molestie commodo condimentum. Morbi sagittis neque a enim ullamcorper commodo. Sed non faucibus quam, eget sollicitudin velit. Mauris vitae egestas mi. Quisque ornare nisl ut tincidunt scelerisque. Proin commodo consequat nunc, tincidunt blandit nibh pharetra ut. Phasellus ut libero nisi.</p>
+      <p class="text-center">Nulla rhoncus arcu non felis efficitur rhoncus. Cras ac ante pulvinar, ornare dui ac, iaculis libero. Quisque faucibus nisl ut ex mattis, sit amet luctus nibh commodo. Nunc eget orci a ipsum posuere vehicula. Nulla aliquet nulla orci, ac dapibus est interdum at. Integer id purus at lacus convallis bibendum. Duis id nisi ligula. Etiam odio sem, tempus in magna quis, aliquet cursus tellus.</p>
+      <p  class="text-justify">Ut mattis purus id arcu sollicitudin commodo. Praesent eu iaculis metus, et posuere felis. Maecenas et porta quam. Fusce posuere leo vitae risus feugiat, sed elementum ante dapibus. Pellentesque pellentesque ultrices mauris, sit amet sollicitudin purus placerat sollicitudin. Ut sit amet quam dui. In hac habitasse platea dictumst. Nunc tristique est mauris, ac posuere magna lacinia tincidunt. Ut laoreet dapibus ante sit amet suscipit. Mauris efficitur, erat id ullamcorper convallis, magna mi pellentesque ante, et feugiat lectus orci in tortor. Duis et nisl enim. Morbi lectus magna, volutpat et mollis sollicitudin, placerat at quam.</p>
+      <p class="text-both">Praesent malesuada tincidunt vestibulum. Donec sit amet arcu dignissim, convallis est tristique, tristique turpis. Pellentesque dictum consequat mi sed vehicula. Aenean at consequat orci. Fusce mi massa, aliquet placerat rhoncus at, mattis ut arcu. Fusce nisi mauris, viverra eu malesuada vel, pellentesque non augue. Nullam viverra commodo sem ac ornare. Ut risus diam, congue nec tellus nec, porta maximus elit. In consequat maximus lobortis. Suspendisse id ante in mi finibus imperdiet sodales convallis dolor.</p>
+    </div>
+    <div class="border border-dark ml-3 mr-3">
+      <p class="pt-3 pw-3">Good morning! This is my 1st Paragraph.</p>
+      <p class="pt-3 pw-3">Good morning! This is my 2nd Paragraph.</p>
+      <p class="pt-3 pw-3">Good morning! This is my 3rd Paragraph.</p>
+    </div>
+    <div class="row">
+      <div class="col-6 border border-dark">
+        <p>1st column: Size 6</p>
+        <div class="row">
+          <div class="col border border-dark">a</div>
+        </div>
+      </div>
+      <div class="col-3 border border-dark">2nd  column: Size 3</div>
+      <div class="col-2 border border-dark">3rd column: Size 2</div>
+      <div class="col-1 border border-dark">4th  column: Size 1</div>
+    </div>
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Subject Code</th>
+          <th>Subject Name</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1184</td>
+          <td>ENGLISH LANGUAGE</td>
+          <td>A2 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>4052</td>
+          <td>MATHEMATICS</td>
+          <td>A1 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>4049</td>
+          <td>ADDITIONAL MATHEMATICS</td>
+          <td>A2 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>6091</td>
+          <td>PHYSICS</td>
+          <td>A1 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>6092</td>
+          <td>Chemistry</td>
+          <td>A1 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>6093</td>
+          <td>BIOLOGY</td>
+          <td>A1 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>2279</td>
+          <td>GEOGRAPHY</td>
+          <td>A2 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>2174</td>
+          <td>HISTORY</td>
+          <td>A1 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+        <tr>
+          <td>2065</td>
+          <td>LITERATURE IN ENGLISH</td>
+          <td>B3 <p class="text-right"><button class="btn btn-danger">Try harder</button><p></td>
+        </tr>
+        <tr>
+          <td>7155</td>
+          <td>COMPUTING</td>
+          <td>A1 <p class="text-right"><button class="btn btn-success">Good</button></p></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary">Register</button>
+    <button class="btn btn-link">Register</button>
+  </body>
+  <script>
+    console.log("Hello World");
+    console.warn("Hello World");
+    console.error("Hello World");
+
+    let name = "Alfred";
+    name = "Leon";
+    const constant = "no";
+   // constant = "yes"; Doesn't work
+   let num = "5"
+   num = num -5 * 6 + 125 / 5;
+    console.log(name);
+    console.log(constant);
+    console.log(num);
+  </script>
+</html>
