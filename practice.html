@@ -161,6 +161,14 @@
     </table>
     <button class="btn btn-primary">Register</button>
     <button class="btn btn-link">Register</button>
+    <form>
+      <label for="UserNumber">Number</label>
+      <input type="number" placeholder="87654321" id="UserNumber" class="form-control">
+      <div class="d-none text-danger" id="errorMessage">
+        <p>Please enter a valid phone number</p>
+      </div>
+      <button type = "button" class="btn btn-primary" onclick="buttonClick()">click me</button>
+    </form>
   </body>
   <script>
     console.log("Hello World");
@@ -202,6 +210,15 @@
       console.log ("Odd number");
     } else {
       console.log ("Even number");
+    }
+
+    let buttonClick = () => {
+      let userPhoneNumber = document.getElementById("UserNumber");
+      console.log(userPhoneNumber.value);
+
+      userPhoneNumber.classList = "form-control is-invalid";
+      document.getElementById("errorMessage").classList = "text-danger";
+      //classList overides the classes
     }
   </script>
 </html>
