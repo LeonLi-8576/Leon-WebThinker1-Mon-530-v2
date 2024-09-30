@@ -163,11 +163,10 @@
     <button class="btn btn-link">Register</button>
     <form>
       <label for="UserNumber">Number</label>
-      <input type="number" placeholder="87654321" id="UserNumber" class="form-control">
-      <div class="d-none text-danger" id="errorMessage">
-        <p>Please enter a valid phone number</p>
-      </div>
-      <button type = "button" class="btn btn-primary" onclick="buttonClick()">click me</button>
+      <input type="number" placeholder="12345678" id="UserNumber" class="form-control">
+      <p class="d-none" id="ErrorMessage1">Please enter your phone number</p>
+      <p class="d-none" id="ErrorMessage2">Please enter a valid phone number</p>
+      <button type = "button" class="btn btn-primary" onclick="ButtonClick()">Submit</button>
     </form>
   </body>
   <script>
@@ -179,7 +178,7 @@
     name = "Leon";
     const constant = "no";
    // constant = "yes"; Doesn't work
-   let num = "5"
+   let num = "5";
    num = num -5 * 6 + 125 / 5;
     console.log(name);
     console.log(constant);
@@ -196,29 +195,40 @@
     let d = 2;
     console.log ( (a + b - c) / d);
 
-    rannum1 = 0
+    rannum1 = 0;
     if (rannum1 > 0) {
       console.log ("Positive number");
     } else if (rannum1 < 0) {
       console.log ("Negative number");
     } else {
       console.log ("Number is 0");
-    };
+    }
 
-    rannum2 = 1
+    rannum2 = 1;
     if (rannum2 % 2 == 1) {
       console.log ("Odd number");
     } else {
       console.log ("Even number");
     }
 
-    let buttonClick = () => {
-      let userPhoneNumber = document.getElementById("UserNumber");
-      console.log(userPhoneNumber.value);
-
-      userPhoneNumber.classList = "form-control is-invalid";
-      document.getElementById("errorMessage").classList = "text-danger";
-      //classList overides the classes
+    let ButtonClick = () => {
+      let UserPhoneNumber = document.getElementById("UserNumber").value.length;
+      if (UserPhoneNumber == 0) {
+        document.getElementById("UserNumber").classList = "form-control is-invalid";
+        document.getElementById("ErrorMessage1").classList = "text-danger";
+        document.getElementById("ErrorMessage2").classList = "d-none";
+      } else if (UserPhoneNumber != 8) {
+        document.getElementById("UserNumber").classList = "form-control is-invalid";
+        document.getElementById("ErrorMessage1").classList = "d-none";
+        document.getElementById("ErrorMessage2").classList = "text-danger";
+      } else {
+        document.getElementById("UserNumber").classList = "form-control is-valid";
+        document.getElementById("ErrorMessage1").classList = "d-none";
+        document.getElementById("ErrorMessage2").classList = "d-none";
+        setTimeout(() => {
+      document.getElementById("UserNumber").classList.remove("is-valid");
+    }, 2000);
+      }
     }
   </script>
 </html>
