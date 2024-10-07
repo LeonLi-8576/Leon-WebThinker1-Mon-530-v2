@@ -53,7 +53,7 @@
 			<div class="row gy-3">
 				<div class="col">
 					<label for="Name" class="fw-bold h3">Name*</label>
-					<input type="number" placeholder="Daniel Soh" id="PhoneNum" class="form-control">
+					<input type="text" placeholder="Daniel Soh" id="Name" class="form-control">
 					<p class="d-none" id="Q1ErrorMessage">Please enter your name</p>
 				</div>
 				<div class="col">
@@ -65,22 +65,63 @@
 				<input type="text" placeholder="Inclusion of Spike Prime to Classes" id="Subject" class="form-control">
 				<p class="d-none" id="Q3ErrorMessage">Please enter your subject</p>
 				<label for="Frame" class="fw-bold h3">Frame*</label>
-				<textarea type="text" placeholder="The Byte Buster Coding Club can enhance its curriculum by incorporating Spike Prime robotics, which makes coding engaging and hands-on.Spike Prime is a user-friendly robotics kit that allows students to build and program robots using Scratch and Python, connecting coding concepts to real-world applications.Students can do the following: Basic Movement: Build a robot to learn movement commands, Maze Challenge: Program the robot to navigate a maze, enhancing problem-solving skills and Sensor Exploration: Use sensors for projects that respond to environmental changes. Students can also work in teams to design their own Spike Prime projects, fostering collaboration and creativity. After each activity, students reflect on their experiences, promoting communication and understanding of coding concepts. Integrating Spike Prime will create a dynamic learning environment, enriching students’ coding education and preparing them for future technological challenges." id="Frame" class="form-control" rows="7"></textarea>
-				<!-- Label: Name*
-						 Text Input field -->
-
-				<!-- Label: Email Address*
-						 Email Input field -->
-
-				<!-- Label: Subject*
-						 Text Input field with placeholder text "Enquiry on how to code"-->
-
-				<!-- Label: Subject*
-						 Textarea field with the row attribute of value 5-->
+				<textarea type="text" placeholder="The Byte Buster Coding Club can enhance its curriculum by incorporating Spike Prime robotics, which makes coding engaging and hands-on. Spike Prime is a user-friendly robotics kit that allows students to build and program robots using Scratch and Python, connecting coding concepts to real-world applications. Students can do the following: Basic Movement: Build a robot to learn movement commands, Maze Challenge: Program the robot to navigate a maze, enhancing problem-solving skills and Sensor Exploration: Use sensors for projects that respond to environmental changes. Students can also work in teams to design their own Spike Prime projects, fostering collaboration and creativity. After each activity, students reflect on their experiences, promoting communication and understanding of coding concepts. Integrating Spike Prime will create a dynamic learning environment, enriching students’ coding education and preparing them for future technological challenges." id="Frame" class="form-control" rows="7"></textarea>
+				<p class="d-none" id="Q4ErrorMessage">Please enter your frame for the subject</p>
+				<p class="text-center"><button type="button" class="btn btn-primary" onclick="Submit()">Send</button></p>
+				<div class="text-center">
+					<i class="bi bi-info-circle"><button type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg></button></i>
+			    </div>
 			</div>
-			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
 		</form>
 	</article>
+	<script>
+		let Submit = () => {
+			let UserName = document.getElementById("Name").value.length;
+			if (UserName == 0) {
+				document.getElementById("Name").classList = "form-control is-invalid";
+				document.getElementById("Q1ErrorMessage").classList = "text-danger";
+			} else {
+				document.getElementById("Name").classList = "form-control is-valid"
+				document.getElementById("Q1ErrorMessage").classList = "d-none"
+				setTimeout(() => {
+      document.getElementById("Name").classList.remove("is-valid");
+    }, 2000);
+			}
+			let UserEmail = document.getElementById("Email").value.length;
+			if (UserEmail == 0) {
+				document.getElementById("Email").classList = "form-control is-invalid";
+				document.getElementById("Q2ErrorMessage").classList = "text-danger";
+			} else {
+				document.getElementById("Email").classList = "form-control is-valid"
+				document.getElementById("Q2ErrorMessage").classList = "d-none"
+				setTimeout(() => {
+      document.getElementById("Email").classList.remove("is-valid");
+    }, 2000);
+			}
+			let UserSubject = document.getElementById("Subject").value.length;
+			if (UserSubject == 0) {
+				document.getElementById("Subject").classList = "form-control is-invalid";
+				document.getElementById("Q3ErrorMessage").classList = "text-danger";
+			} else {
+				document.getElementById("Subject").classList = "form-control is-valid"
+				document.getElementById("Q3ErrorMessage").classList = "d-none"
+				setTimeout(() => {
+      document.getElementById("Subject").classList.remove("is-valid");
+    }, 2000);
+			}
+			let UserFrame = document.getElementById("Frame").value.length;
+			if (UserFrame == 0) {
+				document.getElementById("Frame").classList = "form-control is-invalid";
+				document.getElementById("Q4ErrorMessage").classList = "text-danger";
+			} else {
+				document.getElementById("Frame").classList = "form-control is-valid"
+				document.getElementById("Q4ErrorMessage").classList = "d-none"
+				setTimeout(() => {
+      document.getElementById("Frame").classList.remove("is-valid");
+    }, 2000);
+			}
+		}
+	</script>
 	<!-- End of coding region -->
 	<footer class="bg-dark text-light"><div class="container py-2 pb-4">Done by Leon from Computhink SG, all rights reserved.</div></footer>
 </body>
