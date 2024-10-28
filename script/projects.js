@@ -1,6 +1,34 @@
-window.onload = () =>{
-    const Canvas = document.getElementById("CanvasBoard");
-    let Contacts = Canvas.getContext("2d");
+let Contacts, Canvas, BallRadius, x, y, dx, dy; //To let the system know that there is such a thing as these variables
+window.onload = () => {
+    Canvas = document.getElementById("CanvasBoard");
+    Contacts = Canvas.getContext("2d");
+    BallRadius = 25;
+    x = Canvas.width / 2 - BallRadius / 2;
+    y = Canvas.width / 2 - BallRadius / 2;
+    dx = 2; //The "steps" the ball moves on the x axis
+    dy = 2; //The "steps" the ball moves on the y axis
+    UpdateCanvas();
+}
+const UpdateCanvas = () => {
+    Contacts.clearRect(0, 0, Canvas.width, Canvas.height); //Clears the entier canvas
+    Contacts.beginPath();
+    Contacts.lineWidth = 5;
+    Contacts.strokeStyle = "rgb(0,0,0)";
+    Contacts.fillStyle = "rgb(66, 135, 245)";
+    Contacts.arc(x, y, BallRadius, 0, 2 * Math.PI);
+    Contacts.stroke();
+    Contacts.fill();
+    Contacts.closePath();
+    if (x + dx > Canvas.width - BallRadius || x + dx < BallRadius) {
+        dx = -dx;
+    }
+    if (y + dy > Canvas.height - BallRadius || y + dy < BallRadius) {
+        dy = -dy;
+    }
+    x = x + dx;
+    y = y + dy;
+    requestAnimationFrame(UpdateCanvas); // Calls for the animation in the function, again???
+}
 
     // Contacts.beginPath();
     // Contacts.moveTo(0,0);
@@ -20,4 +48,3 @@ window.onload = () =>{
     // Contacts.fillStyle = "rgb(0, 0, 255)";
     // Contacts.stroke();
     // Contacts.fill();
-}

@@ -1,11 +1,11 @@
 #banner {
-	background-image: url('/img/banner-gaming(2).png');
+	background-image: url('/img/banner-gaming-2.png');
 	background-size: cover;
 	background-position: center center;
-	height: 40vh;
+	height: 60vh;
 }
 @media (min-width: 992px) {
 	#banner {
-		height:60vh;
+		height:100vh;
 	}
 }
